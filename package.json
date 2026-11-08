@@ -39,9 +39,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/scvxzf1/dsh-model-switch.git"
+    "url": "https://github.com/scvxzf1/dsh-teamagent-model-switch.git"
   },
-  "homepage": "https://github.com/scvxzf1/dsh-model-switch#readme",
+  "homepage": "https://github.com/scvxzf1/dsh-teamagent-model-switch#readme",
   "engines": {
     "node": ">=20"
   }

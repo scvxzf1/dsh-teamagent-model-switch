@@ -44,8 +44,8 @@
 
 ```bash
 # 1. 取代码（放在任意目录，示例用 ~/.local/share）
-git clone https://github.com/scvxzf1/dsh-model-switch.git ~/.local/share/dsh-model-switch
-cd ~/.local/share/dsh-model-switch
+git clone https://github.com/scvxzf1/dsh-teamagent-model-switch.git ~/.local/share/dsh-teamagent-model-switch
+cd ~/.local/share/dsh-teamagent-model-switch
 
 # 2. 生成指向本目录的 bundle patch（会写入 cordis.patch.yml）
 node install.mjs
@@ -108,7 +108,7 @@ AgentTeams 升级后需要重新执行一次。用户级 systemd drop-in 示例�
 ```ini
 # ~/.config/systemd/user/dsh-web.service.d/model-switch.conf
 [Service]
-ExecStartPre=/usr/bin/node %h/.local/share/dsh-model-switch/patch-teams.mjs
+ExecStartPre=/usr/bin/node %h/.local/share/dsh-teamagent-model-switch/patch-teams.mjs
 ```
 
 默认失败只警告、不阻断 DSH 启动（网页会拒绝不安全的写入）；需要严格失败可加 `--strict`。
@@ -144,8 +144,8 @@ node --test test.mjs test-members.mjs test-fresh-members.mjs test-client-control
 A local DSH Web plugin that switches models from the browser, including **already-started AgentTeams members**, without restarting DSH.
 
 ```bash
-git clone https://github.com/scvxzf1/dsh-model-switch.git ~/.local/share/dsh-model-switch
-cd ~/.local/share/dsh-model-switch && node install.mjs
+git clone https://github.com/scvxzf1/dsh-teamagent-model-switch.git ~/.local/share/dsh-teamagent-model-switch
+cd ~/.local/share/dsh-teamagent-model-switch && node install.mjs
 # add "@local/dsh-model-switch": "link:<abs path>" to the profile dependencies
 # and to dsh.profile.bundles, then install profile deps
 node patch-teams.mjs      # patches the installed AgentTeams sources (backed up)
