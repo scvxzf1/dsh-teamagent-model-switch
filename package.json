@@ -1,0 +1,48 @@
+{
+  "name": "@local/dsh-model-switch",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "patch": "node patch-teams.mjs",
+    "build": "node build.mjs",
+    "test": "node --test test.mjs test-members.mjs test-fresh-members.mjs test-client-controls.mjs test-batch-members.mjs",
+    "setup": "node install.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-model-selection",
+        "@deepseek-ai/dsh-api-session-controller"
+      ],
+      "platform": "web"
+    }
+  },
+  "description": "Switch DSH Web models from the browser, including already-started AgentTeams members, without restarting DSH.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "agent-teams",
+    "model-switch",
+    "plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scvxzf1/dsh-model-switch.git"
+  },
+  "homepage": "https://github.com/scvxzf1/dsh-model-switch#readme",
+  "engines": {
+    "node": ">=20"
+  }
+}
