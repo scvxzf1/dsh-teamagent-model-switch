@@ -1,4 +1,4 @@
-# dsh-model-switch
+# dsh-teamagent-model-switch
 
 在 DSH Web 界面里直接切换模型，**包括已经启动的 AgentTeams 团队成员**，不需要重启 DSH、不需要改配置文件。
 
@@ -52,7 +52,7 @@ node install.mjs
 
 # 3. 注册到 DSH profile
 #    编辑 ~/.dsh/profiles/<profile>/package.json：
-#      "dependencies": { ..., "@local/dsh-model-switch": "link:/绝对路径/dsh-model-switch" }
+#      "dependencies": { ..., "@local/dsh-model-switch": "link:/绝对路径/dsh-teamagent-model-switch" }
 #      "dsh": { "profile": { "bundles": [ ..., "@local/dsh-model-switch" ] } }
 #    然后在 profile 目录安装依赖（pnpm install 或 dsh plugin add）
 
