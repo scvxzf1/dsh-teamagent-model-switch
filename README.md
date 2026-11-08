@@ -156,4 +156,6 @@ Then open **模型切换** in the sidebar. Apply is disabled when the selected s
 
 ## License
 
-未附带 LICENSE 文件。如需公开授权，请自行添加（例如 MIT / Apache-2.0）。
+[Apache License 2.0](LICENSE)，版权归 `scvxzf1` 所有，详见 [NOTICE](NOTICE)。
+
+本仓库不重新分发第三方代码：`patch-teams.mjs` 只对你已安装的 `@nanmicoder/dsh-agent-teams` 就地打文本补丁（该插件按其自身许可证授权）。
