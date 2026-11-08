@@ -44,7 +44,7 @@
 
 ```bash
 # 1. 取代码（放在任意目录，示例用 ~/.local/share）
-git clone https://github.com/<you>/dsh-model-switch.git ~/.local/share/dsh-model-switch
+git clone https://github.com/scvxzf1/dsh-model-switch.git ~/.local/share/dsh-model-switch
 cd ~/.local/share/dsh-model-switch
 
 # 2. 生成指向本目录的 bundle patch（会写入 cordis.patch.yml）
@@ -144,7 +144,7 @@ node --test test.mjs test-members.mjs test-fresh-members.mjs test-client-control
 A local DSH Web plugin that switches models from the browser, including **already-started AgentTeams members**, without restarting DSH.
 
 ```bash
-git clone https://github.com/<you>/dsh-model-switch.git ~/.local/share/dsh-model-switch
+git clone https://github.com/scvxzf1/dsh-model-switch.git ~/.local/share/dsh-model-switch
 cd ~/.local/share/dsh-model-switch && node install.mjs
 # add "@local/dsh-model-switch": "link:<abs path>" to the profile dependencies
 # and to dsh.profile.bundles, then install profile deps
